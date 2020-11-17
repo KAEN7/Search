@@ -1,0 +1,12 @@
+body {
+    font-weight: 800;
+    background: black;
+}
+
+main {
+    display: flex;
+    width: 1600px;
+    height: 400px;
+    background-color: green;
+    
+}
