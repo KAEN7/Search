@@ -8,15 +8,32 @@
     <title>Search</title>
 </head>
 <body>
-    <main>
+    <!-- <main>
         <div class="search-engine">
-            <div class="google"></div>
-            <div class="naver"></div>
+            <div class="google">G</div>
         </div>
-        <div class="search-bar">
-            <input type="text">
-            <form action=""></form>
-        </div>
-    </main>
+        <form class="search-bar" method="post">
+            <input id="searchTag" type="submit" />
+            
+            <input class="keyword" type="text" value="">
+
+            <select class="SelectSearch">
+                <option value="google" id="google"></option>
+                <option value="naver" id="naver"></option>
+            </select>
+        </form>
+    </main> -->
+    <form class="search">
+        <button class="img--button" type="submit" name="click" value="">
+            <i class="fas fa-search"></i>
+        </button>
+
+        <input class="keyword" type="text" name="search" maxlength="255" value="" autocomplete="off">
+
+        <select name="WhichSearch" class="SelectSearch">
+            <option id="google" value="google">GOOGLE</option>
+            <option id="naver" value="naver">NAVER</option>
+        </select>
+    </form>
 </body>
 </html>
