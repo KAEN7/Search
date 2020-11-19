@@ -1,10 +1,9 @@
 const change = document.getElementById('btn');
 const formChange = document.querySelector('search-bar');
-const action = document.getElementById('search-bar').action;
+// const action = document.getElementById('search-bar').action;
 
-function changeSearch() {
-    action = "https://search.naver.com/search.naver?query="
-    
+function changeSearch(e) {
+    $('#search-bar').attr('action','https://search.naver.com/search.naver?query=');
     console.log('gogo');
 }
 
