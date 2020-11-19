@@ -1,27 +1,14 @@
-const Searching = Search.prototype;
+const change = document.getElementById('btn');
+const formChange = document.querySelector('search-bar');
+const action = document.getElementById('search-bar').action;
 
-function Search() {
-    this.keyword = document.querySelector('input[name = 'search']');
-    this.engine = document.querySelector('.SelectSearch');
-    this.button = document.querySelector('.img--button');
-    this.form = document.querySelector('.search');
-
-    this.engine();
+function changeSearch() {
+    action = "https://search.naver.com/search.naver?query="
+    
+    console.log('gogo');
 }
 
-Searching.Enging = function() {
-    this.form.addEventListener('submit', e => {
-        e.preventDefault();
 
-        let engine = this.engine.value;
-        let keyword = this.keyword.value;
-
-        if(engine === 'google') {
-            location.href = 'https://www.google.co.kr/search?q=' + keyword;
-        } else if(engine === 'naver') {
-            location.href = 'https://search.naver.com/search.naver?query=' + keyword;
-        }
-    });
+if(change) {
+    change.addEventListener('click', changeSearch);
 }
-
-new Search();
