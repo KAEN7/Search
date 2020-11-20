@@ -1,11 +1,16 @@
 const change = document.getElementById('btn');
 const formChange = document.querySelector('search-bar');
 const searchBtn = document.getElementById('btn');
+const main = document.getElementById('main');
 
-function changeSearch(e) {
-    $('#search-bar').attr('action','https://search.naver.com/search.naver?query=');
-    btn.innerText = 'N';
-    console.log('gogo');
+function changeSearch() {
+    if(btn.innerText === 'G') {
+        btn.innerText = 'N';
+        main.style.backgroundColor = 'green';
+    } else {
+        btn.innerText = 'G';
+        main.style.backgroundColor = 'white';
+    }
 }
 
 
