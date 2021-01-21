@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './reset.css';
 
 function App() {
   const change = document.getElementById('btn');
@@ -26,18 +27,19 @@ function App() {
   if(change) {
       change.addEventListener('click', changeSearch);
   }
+
   return (
     <main id='main'>
-        <div class="search-engine">
+        <div className="search-engine">
             <button id="btn">G</button>
         </div>
-        <form class="search-bar" id="google" name="searchBar" method=get action="http://www.google.co.kr/search" target="_self" >
-            <input id="searchTag" type=text name=q maxlength=255 value="" /> <!-- 구글 검색 입력 창 -->           
-            <input id="submitBtn" type=submit name=btnG value="" /> <!-- 검색 버튼 -->
+        <form className="search-bar" id="google" name="searchBar" method={get} action="http://www.google.co.kr/search" target="_self" >
+            <input id="searchTag" type={text} name={q} maxlength={255} value="" /> <!-- 구글 검색 입력 창 -->           
+            <input id="submitBtn" type={submit} name={btnG} value="" /> <!-- 검색 버튼 -->
         </form>
-        <form class="search-bar" id="naver" method=get action="https://search.naver.com/search.naver?ie=UTF-8&query=" target="_self" >
-            <input id="searchTag" type=text name=q maxlength=255 value="" />         
-            <input id="submitBtn" type=submit name=btnG value="" /> 
+        <form className="search-bar" id="naver" method={get} action="https://search.naver.com/search.naver?ie=UTF-8&query=" target="_self" >
+            <input id="searchTag" type={text} name={q} maxlength={255} value="" />         
+            <input id="submitBtn" type={submit} name={btnG} value="" /> 
         </form>
     </main>
   );
